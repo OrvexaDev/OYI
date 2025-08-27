@@ -29,7 +29,7 @@
 - 🎨 **Customizable** - Configure which IDEs to show and set custom paths
 - 🌐 **Internationalized** - Native support for 28 languages and regional variants
 
-![Usage Demo](https://raw.githubusercontent.com/OrvexaDev/OYI/refs/heads/main/assets/ExemploUse.gif?token=GHSAT0AAAAAADJ3F6WPWFEWT3E6XWIA5RE62FMZPJQ)
+![Usage Demo](https://raw.githubusercontent.com/OrvexaDev/OYI/refs/heads/main/assets/ExemploUse.gif)
 
 ---
 
