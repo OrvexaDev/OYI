@@ -1,0 +1,201 @@
+name: 🛠️ Add IDE Support
+description: Request support for a new IDE in the OYI extension
+title: "[IDE] Add support for "
+labels: ["enhancement", "new-ide", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🛠️ Add IDE Support Request for OYI - Open in your IDE
+        
+        Thank you for suggesting a new IDE! Your input helps us expand support for more development environments.
+        
+        Please provide detailed information about the IDE you'd like us to support.
+        
+        **Maintained by**: Orvexa by KAGEYOSHI | **Contact**: [orvexa.support@kageyoshi.com](mailto:orvexa.support@kageyoshi.com)
+
+  - type: checkboxes
+    id: pre-submission
+    attributes:
+      label: 📋 Pre-submission Checklist
+      description: Please verify the following before submitting
+      options:
+        - label: I have searched existing issues and found no similar requests
+          required: true
+        - label: I have checked the [supported IDEs list](https://github.com/OrvexaDev/OYI#readme) and confirmed this IDE is not already supported
+          required: true
+        - label: This IDE is actively maintained and widely used
+          required: true
+
+  - type: input
+    id: ide-name
+    attributes:
+      label: 🏷️ IDE Name
+      description: The full name of the IDE
+      placeholder: "e.g., IntelliJ IDEA Ultimate, Eclipse IDE for Java Developers"
+    validations:
+      required: true
+
+  - type: input
+    id: ide-vendor
+    attributes:
+      label: 🏢 IDE Vendor/Developer
+      description: The company or organization that develops this IDE
+      placeholder: "e.g., JetBrains, Eclipse Foundation, Microsoft"
+    validations:
+      required: true
+
+  - type: input
+    id: ide-website
+    attributes:
+      label: 🌐 Official Website
+      description: Link to the IDE's official website
+      placeholder: "https://www.example.com"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ide-platform
+    attributes:
+      label: 💻 Supported Platforms
+      description: Which platforms does this IDE support?
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Web-based
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ide-type
+    attributes:
+      label: 🎯 IDE Category
+      description: What type of IDE is this?
+      options:
+        - General Purpose IDE
+        - Language-specific IDE
+        - Specialized Development Environment
+        - Text Editor with IDE features
+        - Web-based IDE
+        - Mobile Development IDE
+        - Game Development IDE
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: primary-languages
+    attributes:
+      label: 📝 Primary Programming Languages
+      description: What programming languages does this IDE primarily support?
+      placeholder: |
+        e.g., Java, Kotlin, Scala
+        e.g., C++, C, Assembly
+        e.g., Python, R, Jupyter Notebooks
+    validations:
+      required: true
+
+  - type: textarea
+    id: file-extensions
+    attributes:
+      label: 📄 Common File Extensions
+      description: What file extensions are commonly associated with projects for this IDE?
+      placeholder: |
+        e.g., .java, .kt, .scala, .gradle
+        e.g., .cpp, .c, .h, .cmake
+        e.g., .py, .ipynb, .R
+    validations:
+      required: true
+
+  - type: textarea
+    id: project-files
+    attributes:
+      label: 📁 Project/Solution Files
+      description: What are the typical project or solution file patterns?
+      placeholder: |
+        e.g., pom.xml, build.gradle, .idea/
+        e.g., CMakeLists.txt, Makefile, .vcxproj
+        e.g., requirements.txt, setup.py, pyproject.toml
+    validations:
+      required: true
+
+  - type: textarea
+    id: installation-methods
+    attributes:
+      label: 📦 Installation Methods
+      description: How is this IDE typically installed? (Package managers, installers, etc.)
+      placeholder: |
+        Windows: Installer from website, Chocolatey, Winget
+        macOS: DMG installer, Homebrew Cask, App Store
+        Linux: Package manager (apt, yum, etc.), Flatpak, Snap
+    validations:
+      required: true
+
+  - type: textarea
+    id: executable-info
+    attributes:
+      label: ⚙️ Executable Information
+      description: Information about the IDE's executable and command-line interface
+      placeholder: |
+        Executable name: idea64.exe, idea.exe
+        Command-line support: Yes/No
+        Common launch parameters: --line 123 file.java
+        Installation paths: C:\Program Files\JetBrains\IntelliJ IDEA\bin\
+    validations:
+      required: true
+
+  - type: textarea
+    id: detection-registry
+    attributes:
+      label: 🔍 Detection Information (Windows)
+      description: Registry keys or other detection methods for Windows
+      placeholder: |
+        Registry paths:
+        - HKEY_LOCAL_MACHINE\SOFTWARE\JetBrains\IntelliJ IDEA
+        - HKEY_CURRENT_USER\SOFTWARE\JetBrains\Toolbox
+        
+        File paths to check:
+        - %LOCALAPPDATA%\JetBrains\Toolbox\
+    validations:
+      required: false
+
+  - type: textarea
+    id: usage-justification
+    attributes:
+      label: 📊 Usage Justification
+      description: Why should this IDE be supported? Usage statistics, popularity, unique features, etc.
+      placeholder: |
+        - Number of users/downloads
+        - Unique features that make it valuable
+        - Community size and activity
+        - Specific use cases where this IDE excels
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: ℹ️ Additional Information
+      description: Any other relevant information about this IDE
+      placeholder: |
+        - Special licensing considerations
+        - Unique features or integrations
+        - Compatibility with specific frameworks
+        - Community plugins or extensions
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Contribution
+      description: Would you be willing to help implement support for this IDE?
+      options:
+        - label: I am willing to help test the implementation
+        - label: I can provide technical details and documentation
+        - label: I am interested in contributing code (requires TypeScript knowledge)
+        - label: I can help with documentation and examples

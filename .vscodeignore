@@ -1,0 +1,43 @@
+# Pastas de desenvolvimento
+.vscode/**
+.vscode-test/**
+.vs/**
+.github/**
+.git/**
+out/**
+node_modules/**
+src/**
+
+# Arquivos de localização duplicados (mantém apenas package.nls.*.json na raiz)
+nls/**
+
+# Arquivos de build/desenvolvimento
+.gitignore
+.yarnrc
+esbuild.js
+vsc-extension-quickstart.md
+**/tsconfig.json
+**/eslint.config.mjs
+**/*.map
+**/*.ts
+**/.vscode-test.*
+package-lock.json
+
+# Scripts de desenvolvimento
+scripts/**
+test-linux.sh
+
+# Documentação de desenvolvimento (mantém apenas README.md)
+CONTRIBUTING.md
+TRADEMARK.md
+TROUBLESHOOTING.md
+LOCALIZATION.md
+
+# Builds antigos
+builds/**
+assets/ExemploUse.gif
+assets/Icon_2.png
+
+# Arquivos de teste
+**/*test*
+**/*spec*

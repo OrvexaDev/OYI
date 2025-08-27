@@ -1,0 +1,282 @@
+name: 🚀 Feature Request
+description: Suggest a new feature or enhancement for OYI extension
+title: "[FEATURE] "
+labels: ["enhancement", "feature-request"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚀 Feature Request for OYI - Open in your IDE
+        
+        Thank you for suggesting a new feature! Your ideas help us make the extension better for everyone.
+        
+        Please describe your feature request in detail to help us understand and evaluate it.
+        
+        **Maintained by**: Orvexa by KAGEYOSHI | **Contact**: [orvexa.support@kageyoshi.com](mailto:orvexa.support@kageyoshi.com)
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 📋 Pre-submission Checklist
+      description: Please verify the following before submitting
+      options:
+        - label: I have searched existing issues and feature requests for duplicates
+          required: true
+        - label: I have checked the roadmap and upcoming features
+          required: true
+        - label: This feature aligns with the extension's core purpose (IDE integration)
+          required: true
+        - label: I have considered if this could be achieved with existing functionality
+          required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: 🎯 Feature Category
+      description: What type of feature are you suggesting?
+      options:
+        - New IDE Support (add support for a new IDE)
+        - Context Menu Enhancement (improve right-click menus)
+        - Project Detection (better project/solution detection)
+        - User Interface (improve UI/UX)
+        - Performance Optimization (speed/efficiency improvements)
+        - Configuration Options (new settings/preferences)
+        - Integration Feature (external tool integration)
+        - Accessibility Improvement (better accessibility support)
+        - Developer Experience (improved development workflow)
+        - Localization/Translation (language support)
+        - Other (please specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: 💡 Feature Summary
+      description: A clear and concise description of the feature you'd like to see
+      placeholder: |
+        Example: "Add support for opening files directly in JetBrains Fleet IDE"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: 🎯 Problem Statement
+      description: What problem does this feature solve? What's the current pain point?
+      placeholder: |
+        Describe the problem this feature would solve:
+        - What is currently difficult or impossible?
+        - How does this affect your workflow?
+        - What workarounds are you currently using?
+        
+        Example: "I frequently work with Rust projects and would like to open them directly in 
+        RustRover, but the extension doesn't currently support this IDE."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: ✅ Proposed Solution
+      description: Describe your proposed solution in detail
+      placeholder: |
+        Describe your proposed solution:
+        - How should this feature work?
+        - What should the user experience be?
+        - Are there any specific technical requirements?
+        
+        Example: "Add RustRover detection to the IDE detection logic and include 
+        '.rs' files in the supported file types for context menu integration."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternative-solutions
+    attributes:
+      label: 🔄 Alternative Solutions
+      description: Have you considered any alternative approaches?
+      placeholder: |
+        Example: "Could also be implemented as a configurable custom command 
+        that users can define themselves."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: 👥 Target Users
+      description: What type of user would benefit from this feature?
+      options:
+        - All users (general improvement)
+        - Beginner developers
+        - Experienced developers
+        - Enterprise teams
+        - Open source contributors
+        - Students/Educational users
+        - Specific language developers (specify in additional context)
+        - Power users/Advanced configurations
+        - Other (please specify)
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⭐ Priority Level
+      description: How important is this feature to you?
+      options:
+        - Critical (blocking my workflow)
+        - High (significantly improves workflow)
+        - Medium (nice to have improvement)
+        - Low (minor enhancement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 📋 Use Cases & Examples
+      description: Provide specific examples of how this feature would be used
+      placeholder: |
+        Example use cases:
+        1. As a .NET developer, I want to open .csproj files directly in Rider so that I can switch between VS Code and JetBrains IDE seamlessly
+        2. When working on large solutions, this feature would help by providing quick access to the full IDE experience
+        3. In my daily workflow, I would use this to rapidly switch contexts between lightweight editing and full debugging
+        
+        Specific scenarios:
+        - Working with microservices across multiple repositories
+        - Code review workflow requiring different IDE features
+        - Teaching/mentoring scenarios with different tool preferences
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: 🔧 Technical Considerations
+      description: Are there any technical aspects we should consider?
+      placeholder: |
+        Consider mentioning:
+        - Platform-specific requirements (Windows registry, macOS app bundles, Linux desktop files)
+        - Performance implications (detection speed, memory usage)
+        - Compatibility concerns (IDE versions, file associations)
+        - Security considerations (execution permissions, path validation)
+        - Integration requirements (command-line interfaces, protocols)
+        
+        Example: "This would require detecting Fleet installations via the JetBrains Toolbox registry entries on Windows"
+    validations:
+      required: false
+
+  - type: textarea
+    id: mockups-examples
+    attributes:
+      label: 📸 Mockups & Visual Examples
+      description: |
+        If applicable, provide:
+        - Screenshots of expected behavior
+        - Mockups of new UI elements
+        - Examples from other similar tools
+        - Links to documentation
+      placeholder: |
+        You can drag and drop images here or provide links to:
+        - Design mockups
+        - Screenshots from similar tools
+        - Documentation references
+        - Video demonstrations
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: 💻 Target Platforms
+      description: Which platforms should this feature support?
+      options:
+        - label: Windows (primary platform)
+        - label: macOS (secondary support)
+        - label: Linux (community support)
+
+  - type: dropdown
+    id: implementation-complexity
+    attributes:
+      label: 🛠️ Estimated Implementation Complexity
+      description: Based on your understanding, how complex might this be to implement?
+      options:
+        - Simple (configuration change, minor addition)
+        - Moderate (new detection logic, UI changes)
+        - Complex (major architecture changes, cross-platform considerations)
+        - Unknown (needs investigation)
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context & Research
+      description: |
+        Add any other context about the feature request:
+        - Related issues or discussions
+        - Research you've done
+        - Similar features in other tools
+        - Community demand indicators
+      placeholder: |
+        Example:
+        - Link to similar feature requests: #123
+        - Research on Fleet's command-line interface
+        - Community discussion on Reddit/Stack Overflow
+        - Comparison with other IDE switcher tools
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Contribution Willingness
+      description: Would you be willing to help implement this feature?
+      options:
+        - label: I would be willing to submit a pull request for this feature
+        - label: I would be willing to help with testing and validation
+        - label: I would be willing to help with documentation
+        - label: I would be willing to provide feedback during development
+        - label: I would be willing to help with research and design
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: ✅ Acceptance Criteria
+      description: |
+        What would need to be true for this feature to be considered complete?
+        This helps us understand your expectations and ensure we deliver what you need.
+      placeholder: |
+        Define what "done" looks like:
+        - [ ] Feature works reliably on Windows, macOS, and Linux
+        - [ ] Context menu integration works for relevant file types
+        - [ ] Proper IDE detection and validation
+        - [ ] Appropriate error handling and user feedback
+        - [ ] Feature doesn't break existing functionality
+        - [ ] Documentation updated with new feature
+        - [ ] Settings/configuration options (if applicable)
+        
+        Example for IDE support:
+        - [ ] Fleet IDE is detected when installed via JetBrains Toolbox
+        - [ ] Right-click context menu shows "Open in Fleet" for supported file types
+        - [ ] Files/folders open correctly in Fleet with proper project context
+        - [ ] Error message shown if Fleet is not installed or accessible
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        **🚀 Thank you for your feature suggestion!**
+        
+        We'll review your request and consider it for future releases. Feature requests are prioritized based on:
+        - Community demand and voting
+        - Alignment with project goals
+        - Implementation complexity
+        - Available development resources
+        
+        You can track the progress of this request and contribute to the discussion. For questions, contact us at [orvexa.support@kageyoshi.com](mailto:orvexa.support@kageyoshi.com)

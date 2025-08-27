@@ -1,0 +1,9 @@
+{
+	"extension.displayName": "OYI - Åbn i dit IDE",
+	"extension.description": "Universal IDE integration - Åbn dine projekter i 25+ IDE'er med intelligente kontekstmenu muligheder",
+	"command.openInIDE.title": "Åbn i IDE",
+	"configuration.title": "OYI - Åbn i dit IDE",
+	"configuration.enabledIDEs.description": "Liste over IDE'er at vise i kontekstmenuen",
+	"configuration.customIDEPaths.description": "Brugerdefinerede stier til IDE-eksekverbare filer",
+	"configuration.defaultIDE.description": "Standard IDE at bruge når flere muligheder er tilgængelige"
+}

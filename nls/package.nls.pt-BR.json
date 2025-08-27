@@ -1,0 +1,9 @@
+{
+	"extension.displayName": "OYI - Abrir no seu IDE",
+	"extension.description": "Integração universal de IDEs - Abra seus projetos em 25+ IDEs com opções inteligentes no menu de contexto",
+	"command.openInIDE.title": "Abrir no IDE",
+	"configuration.title": "OYI - Abrir no seu IDE",
+	"configuration.enabledIDEs.description": "Lista de IDEs a serem mostrados no menu de contexto",
+	"configuration.customIDEPaths.description": "Caminhos personalizados para executáveis de IDE",
+	"configuration.defaultIDE.description": "IDE padrão a ser usado quando múltiplas opções estão disponíveis"
+}

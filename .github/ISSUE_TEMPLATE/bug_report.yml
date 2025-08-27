@@ -1,0 +1,287 @@
+name: 🐛 Bug Report
+description: Create a report to help us improve the OYI extension
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report for OYI - Open in your IDE
+        
+        Thank you for taking the time to report a bug! Your feedback helps us improve the extension for everyone.
+        
+        Please fill out the information below to help us reproduce and fix the issue quickly.
+        
+        **Maintained by**: Orvexa by KAGEYOSHI | **Contact**: [orvexa.support@kageyoshi.com](mailto:orvexa.support@kageyoshi.com)
+
+  - type: checkboxes
+    id: pre-submission
+    attributes:
+      label: 📋 Pre-submission Checklist
+      description: Please verify the following before submitting
+      options:
+        - label: I have searched existing issues and found no duplicates
+          required: true
+        - label: I am using the latest version of the extension
+          required: true
+        - label: I have read the [README](https://github.com/OrvexaDev/OYI#readme) and troubleshooting guide
+          required: true
+        - label: This issue is specifically related to the OYI extension (not VS Code or the target IDE)
+          required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 🔍 Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: |
+        Example: "When I right-click on a .sln file, the context menu doesn't show the 'Open in Visual Studio' option"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Detailed steps to reproduce the behavior
+      placeholder: |
+        1. Open VS Code
+        2. Navigate to a folder containing a .sln file
+        3. Right-click on the .sln file in Explorer
+        4. Look for OYI options in context menu
+        5. Notice that they are missing
+      value: |
+        1. 
+        2. 
+        3. 
+        4. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: ✅ Expected Behavior
+      description: What did you expect to happen?
+      placeholder: |
+        Example: "The context menu should show 'Open in Visual Studio 2022' option"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: ❌ Actual Behavior
+      description: What actually happened?
+      placeholder: |
+        Example: "The context menu appears but doesn't contain any OYI options"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: 💻 Operating System
+      description: Which OS are you using?
+      options:
+        - Windows 11
+        - Windows 10
+        - Windows Server 2022
+        - Windows Server 2019
+        - macOS Sonoma (14.x)
+        - macOS Ventura (13.x)
+        - macOS Monterey (12.x)
+        - Ubuntu 22.04 LTS
+        - Ubuntu 20.04 LTS
+        - Other Linux Distribution
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: input
+    id: vscode-version
+    attributes:
+      label: 📋 VS Code Version
+      description: Help → About Visual Studio Code
+      placeholder: "e.g., 1.85.2"
+    validations:
+      required: true
+
+  - type: input
+    id: extension-version
+    attributes:
+      label: 🔌 OYI Extension Version
+      description: Extensions → OYI - Open in your IDE → Version
+      placeholder: "e.g., 1.2.3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ide-target
+    attributes:
+      label: 🎯 Target IDE
+      description: Which IDE were you trying to open?
+      options:
+        - Visual Studio 2022 (any edition)
+        - Visual Studio 2019 (any edition)
+        - Visual Studio Code
+        - Visual Studio Code Insiders
+        - JetBrains Rider
+        - JetBrains IntelliJ IDEA
+        - JetBrains WebStorm
+        - JetBrains PyCharm
+        - JetBrains PhpStorm
+        - JetBrains CLion
+        - JetBrains GoLand
+        - JetBrains RubyMine
+        - Android Studio
+        - Xcode
+        - Eclipse IDE
+        - Apache NetBeans
+        - Qt Creator
+        - Code::Blocks
+        - Dev-C++
+        - Sublime Text
+        - Atom
+        - Multiple IDEs
+        - Other (please specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: ide-detection
+    attributes:
+      label: 🔍 IDE Detection Info
+      description: |
+        Help us understand your IDE setup (if applicable):
+        - Is the target IDE installed and working normally?
+        - Can you launch it from Start Menu/Applications?
+        - Installation path (if non-standard)
+      placeholder: |
+        Example:
+        - Visual Studio 2022 Community installed via Visual Studio Installer
+        - Can launch normally from Start Menu
+        - Installed to default location (C:\Program Files\Microsoft Visual Studio\2022\Community)
+    validations:
+      required: false
+
+  - type: textarea
+    id: error-logs
+    attributes:
+      label: 📄 Error Logs & Output
+      description: |
+        Please provide relevant logs and error messages:
+        
+        **🔍 VS Code Output Panel:**
+        1. View → Output
+        2. Select "OYI - Open in your IDE" from dropdown
+        3. Copy any messages
+        
+        **🛠️ VS Code Developer Console:**
+        1. Help → Toggle Developer Tools
+        2. Console tab
+        3. Copy any red error messages
+      placeholder: |
+        Paste logs here...
+        
+        VS Code Output:
+        [No output available / Paste output here]
+        
+        Developer Console:
+        [No errors / Paste errors here]
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 Screenshots
+      description: |
+        If applicable, add screenshots to help explain the problem.
+        You can drag and drop images here or use the upload button.
+      placeholder: "Drag and drop screenshot files here, or click to upload"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 📊 Issue Frequency
+      description: How often does this issue occur?
+      options:
+        - Always (100% of the time)
+        - Often (more than 50% of the time)
+        - Sometimes (less than 50% of the time)
+        - Rarely (happened once or twice)
+        - First time experiencing this
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: 🎯 Impact Level
+      description: How much does this bug affect your workflow?
+      options:
+        - Critical (completely blocks my work)
+        - High (significantly impacts productivity)
+        - Medium (inconvenient but has workarounds)
+        - Low (minor annoyance)
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: 🔄 Workaround
+      description: Have you found any temporary solutions or workarounds?
+      placeholder: |
+        Example: "I can still open files by manually launching Visual Studio and using File → Open"
+    validations:
+      required: false
+
+  - type: textarea
+    id: extension-settings
+    attributes:
+      label: ⚙️ Extension Settings
+      description: |
+        Share your OYI extension settings (if relevant):
+        - File → Preferences → Settings → Search "openInIDE"
+      placeholder: "Paste settings JSON here..."
+      render: json
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: |
+        Any other information that might help us understand and fix the issue:
+        - Recent changes to your system
+        - Other extensions that might conflict
+        - Specific project types or file structures
+        - Network/security restrictions
+      placeholder: "Any additional information that might be relevant..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Contribution
+      description: Would you be willing to help with this issue?
+      options:
+        - label: I would be willing to submit a pull request to fix this issue
+        - label: I would be willing to test a potential fix
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        **🙏 Thank you for helping improve OYI!**
+        
+        We'll review your report and get back to you as soon as possible. For urgent issues, you can also contact us at [orvexa.support@kageyoshi.com](mailto:orvexa.support@kageyoshi.com)

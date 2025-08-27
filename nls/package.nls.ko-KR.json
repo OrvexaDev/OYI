@@ -1,0 +1,9 @@
+{
+	"extension.displayName": "OYI - IDE에서 열기",
+	"extension.description": "유니버설 IDE 통합 - 지능형 컨텍스트 메뉴 옵션으로 25개 이상의 IDE에서 프로젝트 열기",
+	"command.openInIDE.title": "IDE에서 열기",
+	"configuration.title": "OYI - IDE에서 열기",
+	"configuration.enabledIDEs.description": "컨텍스트 메뉴에 표시할 IDE 목록",
+	"configuration.customIDEPaths.description": "IDE 실행 파일의 사용자 정의 경로",
+	"configuration.defaultIDE.description": "여러 옵션이 사용 가능할 때 사용할 기본 IDE"
+}

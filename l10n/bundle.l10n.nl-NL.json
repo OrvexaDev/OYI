@@ -1,0 +1,18 @@
+{
+	"extension.displayName": "OYI - Openen in uw IDE",
+	"extension.description": "Universele IDE-integratie - Open uw projecten in 25+ IDE's met intelligente contextmenu-opties",
+	"command.openInIDE.title": "Openen in IDE",
+	"configuration.title": "OYI - Openen in uw IDE",
+	"configuration.enabledIDEs.description": "Lijst van IDE's om te tonen in het contextmenu",
+	"configuration.customIDEPaths.description": "Aangepaste paden voor IDE-executables",
+	"configuration.defaultIDE.description": "Standaard IDE om te gebruiken wanneer meerdere opties beschikbaar zijn",
+	"failedToOpen": "Openen mislukt: {0}",
+	"noFileSelected": "Geen bestand of map geselecteerd",
+	"ideNotFound": "IDE '{0}' niet gevonden of niet geïnstalleerd",
+	"openedInIde": "'{0}' geopend in {1}",
+	"failedToLaunch": "Starten van {0} mislukt: {1}",
+	"noIDEsEnabled": "Geen IDE's zijn ingeschakeld in de instellingen",
+	"openIn": "Openen in {0}",
+	"selectIDE": "Selecteer IDE om te openen",
+	"multipleProjectsFound": "Meerdere projecten gevonden, selecteer er een om te openen"
+}

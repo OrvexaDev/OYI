@@ -1,0 +1,9 @@
+{
+	"extension.displayName": "OYI - 在您的IDE中打开",
+	"extension.description": "通用IDE集成 - 在25+个IDE中打开您的项目，具有智能上下文菜单选项",
+	"command.openInIDE.title": "在IDE中打开",
+	"configuration.title": "OYI - 在您的IDE中打开",
+	"configuration.enabledIDEs.description": "要在上下文菜单中显示的IDE列表",
+	"configuration.customIDEPaths.description": "IDE可执行文件的自定义路径",
+	"configuration.defaultIDE.description": "当有多个选项可用时要使用的默认IDE"
+}

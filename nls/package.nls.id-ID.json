@@ -1,0 +1,9 @@
+{
+	"extension.displayName": "OYI - Buka di IDE Anda",
+	"extension.description": "Integrasi IDE universal - Buka proyek Anda di 25+ IDE dengan opsi menu konteks yang cerdas",
+	"command.openInIDE.title": "Buka di IDE",
+	"configuration.title": "OYI - Buka di IDE Anda",
+	"configuration.enabledIDEs.description": "Daftar IDE untuk ditampilkan di menu konteks",
+	"configuration.customIDEPaths.description": "Path kustom untuk executable IDE",
+	"configuration.defaultIDE.description": "IDE default untuk digunakan ketika beberapa opsi tersedia"
+}

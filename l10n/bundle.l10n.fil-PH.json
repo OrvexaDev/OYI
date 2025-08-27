@@ -1,0 +1,18 @@
+{
+	"extension.displayName": "OYI - Buksan sa inyong IDE",
+	"extension.description": "Universal IDE integration - Buksan ang inyong mga proyekto sa 25+ IDEs na may matalinong context menu options",
+	"command.openInIDE.title": "Buksan sa IDE",
+	"configuration.title": "OYI - Buksan sa inyong IDE",
+	"configuration.enabledIDEs.description": "Listahan ng mga IDE na ipapakita sa context menu",
+	"configuration.customIDEPaths.description": "Custom na mga path para sa IDE executables",
+	"configuration.defaultIDE.description": "Default na IDE na gagamitin kapag maraming options ang available",
+	"failedToOpen": "Hindi nabuksan: {0}",
+	"noFileSelected": "Walang napiling file o folder",
+	"ideNotFound": "Hindi natagpuan o hindi na-install ang IDE '{0}'",
+	"openedInIde": "Nabuksan ang '{0}' sa {1}",
+	"failedToLaunch": "Hindi ma-launch ang {0}: {1}",
+	"noIDEsEnabled": "Walang na-enable na IDEs sa settings",
+	"openIn": "Buksan sa {0}",
+	"selectIDE": "Pumili ng IDE para buksan",
+	"multipleProjectsFound": "Maraming proyektong natagpuan, pumili ng isa para buksan"
+}

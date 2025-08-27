@@ -1,0 +1,9 @@
+{
+	"extension.displayName": "OYI - เปิดใน IDE ของคุณ",
+	"extension.description": "การผสานรวม IDE แบบสากล - เปิดโปรเจ็กต์ของคุณใน IDE มากกว่า 25 ตัวด้วยตัวเลือกเมนูบริบทที่ฉลาด",
+	"command.openInIDE.title": "เปิดใน IDE",
+	"configuration.title": "OYI - เปิดใน IDE ของคุณ",
+	"configuration.enabledIDEs.description": "รายการ IDE ที่จะแสดงในเมนูบริบท",
+	"configuration.customIDEPaths.description": "เส้นทางที่กำหนดเองสำหรับไฟล์ปฏิบัติการ IDE",
+	"configuration.defaultIDE.description": "IDE เริ่มต้นที่จะใช้เมื่อมีตัวเลือกหลายตัว"
+}

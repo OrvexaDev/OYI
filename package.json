@@ -1,0 +1,329 @@
+{
+  "name": "oyi-open-in-your-ide",
+  "displayName": "%extension.displayName%",
+  "description": "%extension.description%",
+  "version": "1.0.0",
+  "preview": false,
+  "icon": "assets/Icon.png",
+  "publisher": "OrvexaByKageyoshi",
+  "author": "Orvexa by KAGEYOSHI",
+  "license": "MIT",
+  "keywords": [
+    "oyi",
+    "open in your ide",
+    "ide",
+    "tools",
+    "development",
+    "visual studio",
+    "visual studio code",
+    "jetbrains",
+    "rider",
+    "clion",
+    "xcode",
+    "intellij",
+    "webstorm",
+    "pycharm",
+    "goland",
+    "rubymine",
+    "phpstorm",
+    "android studio",
+    "eclipse",
+    "netbeans",
+    "qt creator",
+    "codeblocks",
+    "sublime text",
+    "atom",
+    "brackets",
+    "vim",
+    "emacs",
+    "spyder",
+    "wing pro",
+    "rstudio",
+    "matlab",
+    "octave",
+    "lazarus",
+    "rad studio",
+    "delphi",
+    "rustrover",
+    "code composer studio",
+    "mplab x",
+    "stm32cubeide",
+    "keil",
+    "iar",
+    "arduino",
+    "processing",
+    "vs",
+    "sln",
+    "solution",
+    "project",
+    "context menu",
+    "open",
+    "dotnet",
+    ".net",
+    "java",
+    "python",
+    "javascript",
+    "typescript",
+    "php",
+    "ruby",
+    "go",
+    "rust",
+    "cpp",
+    "c++",
+    "swift",
+    "kotlin",
+    "r",
+    "matlab",
+    "pascal",
+    "embedded",
+    "microcontroller",
+    "arduino",
+    "stm32",
+    "pic",
+    "arm",
+    "orvexa",
+    "kageyoshi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrvexaDev/OYI.git"
+  },
+  "homepage": "https://github.com/OrvexaDev/OYI",
+  "bugs": {
+    "url": "https://github.com/OrvexaDev/OYI/issues"
+  },
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Other",
+    "Extension Packs"
+  ],
+  "galleryBanner": {
+    "color": "#0078D4",
+    "theme": "dark"
+  },
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "l10n": "./l10n",
+  "contributes": {
+    "commands": [
+      {
+        "command": "OpenInVisualStudio.openInIDE",
+        "title": "%command.openInIDE.title%",
+        "icon": "$(window)"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "OpenInVisualStudio.openInIDE",
+          "when": "resourceExtname == .sln || resourceExtname == .csproj || resourceExtname == .vbproj || resourceExtname == .fsproj || resourceExtname == .vcxproj || resourceExtname == .xcodeproj || resourceExtname == .xcworkspace || resourceExtname == .java || resourceExtname == .kt || resourceExtname == .py || resourceExtname == .go || resourceExtname == .rb || resourceExtname == .php || resourceExtname == .js || resourceExtname == .ts || resourceExtname == .html || resourceExtname == .css || resourceExtname == .pro || resourceExtname == .cbp || resourceExtname == .r || resourceExtname == .R || resourceExtname == .m || resourceExtname == .pas || resourceExtname == .rs || resourceExtname == .c || resourceExtname == .cpp || resourceExtname == .h || resourceExtname == .ino || resourceExtname == .pde",
+          "group": "navigation"
+        },
+        {
+          "command": "OpenInVisualStudio.openInIDE",
+          "when": "explorerResourceIsFolder && resourceScheme == file",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "%configuration.title%",
+      "properties": {
+        "openInIDE.enabledIDEs": {
+          "type": "array",
+          "default": [
+            "visualstudio",
+            "rider",
+            "clion"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "visualstudio",
+              "rider",
+              "clion",
+              "xcode",
+              "intellij",
+              "webstorm",
+              "pycharm",
+              "goland",
+              "rubymine",
+              "phpstorm",
+              "androidstudio",
+              "eclipse",
+              "netbeans",
+              "qtcreator",
+              "codeblocks",
+              "sublimetext",
+              "atom",
+              "brackets",
+              "vim",
+              "emacs",
+              "spyder",
+              "wingpro",
+              "rstudio",
+              "matlab",
+              "octave",
+              "lazarus",
+              "radstudio",
+              "rustrover",
+              "ccs",
+              "mplabx",
+              "stm32cubeide",
+              "keil",
+              "iar",
+              "arduino",
+              "processing"
+            ]
+          },
+          "description": "%configuration.enabledIDEs.description%"
+        },
+        "openInIDE.customIDEPaths": {
+          "type": "object",
+          "default": {},
+          "description": "%configuration.customIDEPaths.description%",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "openInIDE.defaultIDE": {
+          "type": "string",
+          "default": "visualstudio",
+          "enum": [
+            "visualstudio",
+            "rider",
+            "clion",
+            "xcode",
+            "intellij",
+            "webstorm",
+            "pycharm",
+            "goland",
+            "rubymine",
+            "phpstorm",
+            "androidstudio",
+            "eclipse",
+            "netbeans",
+            "qtcreator",
+            "codeblocks",
+            "sublimetext",
+            "atom",
+            "brackets",
+            "vim",
+            "emacs",
+            "spyder",
+            "wingpro",
+            "rstudio",
+            "matlab",
+            "octave",
+            "lazarus",
+            "radstudio",
+            "rustrover",
+            "ccs",
+            "mplabx",
+            "stm32cubeide",
+            "keil",
+            "iar",
+            "arduino",
+            "processing"
+          ],
+          "description": "Default IDE to use when multiple options are available"
+        },
+        "openInIDE.workspaceIsolation": {
+          "type": "object",
+          "default": {
+            "enabled": true,
+            "useNewInstance": true,
+            "preventStartupConflicts": true,
+            "enhancedMode": true
+          },
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true,
+              "description": "Enable workspace isolation for all IDEs to prevent conflicts with VS Code"
+            },
+            "useNewInstance": {
+              "type": "boolean",
+              "default": true,
+              "description": "Launch IDEs in new instances to avoid workspace conflicts"
+            },
+            "preventStartupConflicts": {
+              "type": "boolean",
+              "default": true,
+              "description": "Use startup parameters to minimize conflicts between IDEs"
+            },
+            "enhancedMode": {
+              "type": "boolean",
+              "default": true,
+              "description": "Enable enhanced isolation mode with extended timeouts and conflict detection"
+            }
+          },
+          "description": "Global workspace isolation options for all supported IDEs to prevent conflicts with VS Code"
+        },
+        "openInIDE.visualStudioOptions": {
+          "type": "object",
+          "default": {
+            "useNewInstance": true,
+            "preventStartupConflicts": true,
+            "isolateWorkspace": true
+          },
+          "properties": {
+            "useNewInstance": {
+              "type": "boolean",
+              "default": true,
+              "description": "Launch Visual Studio in a new instance to avoid workspace conflicts with VS Code"
+            },
+            "preventStartupConflicts": {
+              "type": "boolean",
+              "default": true,
+              "description": "Use startup parameters to minimize conflicts with other IDEs"
+            },
+            "isolateWorkspace": {
+              "type": "boolean",
+              "default": true,
+              "description": "Isolate workspace to prevent project system conflicts"
+            }
+          },
+          "description": "Advanced options for Visual Studio launching behavior to prevent workspace conflicts"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run generate:package-nls && npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "test:ubuntu": "bash scripts/test-ubuntu.sh",
+    "test:basic": "node -e \"console.log('✅ Basic compatibility check passed'); console.log('Node.js version:', process.version); console.log('Platform:', process.platform); process.exit(0);\"",
+    "generate:package-nls": "node scripts/create-package-nls.js",
+    "generate:release-description": "node scripts/generate-release-description.js",
+    "release:patch": "node scripts/release.js patch",
+    "release:minor": "node scripts/release.js minor",
+    "release:major": "node scripts/release.js major"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.103.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "esbuild": "^0.25.8",
+    "eslint": "^9.32.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.2",
+    "vsce": "^2.15.0"
+  }
+}

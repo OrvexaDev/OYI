@@ -1,0 +1,18 @@
+{
+	"extension.displayName": "OYI - افتح في بيئة التطوير الخاصة بك",
+	"extension.description": "تكامل شامل لبيئات التطوير - افتح مشاريعك في أكثر من 25 بيئة تطوير مع خيارات قائمة السياق الذكية",
+	"command.openInIDE.title": "افتح في بيئة التطوير",
+	"configuration.title": "OYI - افتح في بيئة التطوير الخاصة بك",
+	"configuration.enabledIDEs.description": "قائمة بيئات التطوير المعروضة في قائمة السياق",
+	"configuration.customIDEPaths.description": "مسارات مخصصة لملفات تشغيل بيئات التطوير",
+	"configuration.defaultIDE.description": "بيئة التطوير الافتراضية للاستخدام عند توفر خيارات متعددة",
+	"failedToOpen": "فشل في الفتح: {0}",
+	"noFileSelected": "لم يتم تحديد ملف أو مجلد",
+	"ideNotFound": "بيئة التطوير '{0}' غير موجودة أو غير مثبتة",
+	"openedInIde": "تم فتح '{0}' في {1}",
+	"failedToLaunch": "فشل في تشغيل {0}: {1}",
+	"noIDEsEnabled": "لا توجد بيئات تطوير مفعلة في الإعدادات",
+	"openIn": "افتح في {0}",
+	"selectIDE": "حدد بيئة التطوير للفتح",
+	"multipleProjectsFound": "تم العثور على مشاريع متعددة، حدد واحداً للفتح"
+}

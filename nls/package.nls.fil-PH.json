@@ -1,0 +1,9 @@
+{
+	"extension.displayName": "OYI - Buksan sa inyong IDE",
+	"extension.description": "Universal IDE integration - Buksan ang inyong mga proyekto sa 25+ IDEs na may matalinong context menu options",
+	"command.openInIDE.title": "Buksan sa IDE",
+	"configuration.title": "OYI - Buksan sa inyong IDE",
+	"configuration.enabledIDEs.description": "Listahan ng mga IDE na ipapakita sa context menu",
+	"configuration.customIDEPaths.description": "Custom na mga path para sa IDE executables",
+	"configuration.defaultIDE.description": "Default na IDE na gagamitin kapag maraming options ang available"
+}

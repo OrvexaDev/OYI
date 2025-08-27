@@ -1,0 +1,9 @@
+{
+	"extension.displayName": "OYI - IDEで開く",
+	"extension.description": "ユニバーサルIDE統合 - インテリジェントなコンテキストメニューオプションで25以上のIDEでプロジェクトを開く",
+	"command.openInIDE.title": "IDEで開く",
+	"configuration.title": "OYI - IDEで開く",
+	"configuration.enabledIDEs.description": "コンテキストメニューに表示するIDEのリスト",
+	"configuration.customIDEPaths.description": "IDE実行ファイルのカスタムパス",
+	"configuration.defaultIDE.description": "複数のオプションが利用可能な場合に使用するデフォルトIDE"
+}

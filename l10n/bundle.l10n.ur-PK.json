@@ -1,0 +1,18 @@
+{
+	"extension.displayName": "OYI - اپنے IDE میں کھولیں",
+	"extension.description": "یونیورسل IDE انضمام - اپنے پروجیکٹس کو 25+ IDEs میں دانشمندانہ کنٹیکسٹ مینو آپشنز کے ساتھ کھولیں",
+	"command.openInIDE.title": "IDE میں کھولیں",
+	"configuration.title": "OYI - اپنے IDE میں کھولیں",
+	"configuration.enabledIDEs.description": "کنٹیکسٹ مینو میں دکھانے کے لیے IDEs کی فہرست",
+	"configuration.customIDEPaths.description": "IDE ایگزیکیوٹیبلز کے لیے حسب ضرورت پاتھس",
+	"configuration.defaultIDE.description": "ڈیفالٹ IDE جب متعدد آپشنز دستیاب ہوں",
+	"failedToOpen": "کھولنے میں ناکام: {0}",
+	"noFileSelected": "کوئی فائل یا فولڈر منتخب نہیں",
+	"ideNotFound": "IDE '{0}' نہیں ملا یا انسٹال نہیں",
+	"openedInIde": "'{0}' کو {1} میں کھولا گیا",
+	"failedToLaunch": "{0} شروع کرنے میں ناکام: {1}",
+	"noIDEsEnabled": "سیٹنگز میں کوئی IDEs فعال نہیں",
+	"openIn": "{0} میں کھولیں",
+	"selectIDE": "کھولنے کے لیے IDE منتخب کریں",
+	"multipleProjectsFound": "متعدد پروجیکٹس ملے، کھولنے کے لیے ایک منتخب کریں"
+}

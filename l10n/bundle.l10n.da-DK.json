@@ -1,0 +1,18 @@
+{
+	"extension.displayName": "OYI - Åbn i dit IDE",
+	"extension.description": "Universal IDE integration - Åbn dine projekter i 25+ IDE'er med intelligente kontekstmenu muligheder",
+	"command.openInIDE.title": "Åbn i IDE",
+	"configuration.title": "OYI - Åbn i dit IDE",
+	"configuration.enabledIDEs.description": "Liste over IDE'er at vise i kontekstmenuen",
+	"configuration.customIDEPaths.description": "Brugerdefinerede stier til IDE-eksekverbare filer",
+	"configuration.defaultIDE.description": "Standard IDE at bruge når flere muligheder er tilgængelige",
+	"failedToOpen": "Kunne ikke åbne: {0}",
+	"noFileSelected": "Ingen fil eller mappe valgt",
+	"ideNotFound": "IDE '{0}' ikke fundet eller ikke installeret",
+	"openedInIde": "Åbnede '{0}' i {1}",
+	"failedToLaunch": "Kunne ikke starte {0}: {1}",
+	"noIDEsEnabled": "Ingen IDE'er er aktiveret i indstillingerne",
+	"openIn": "Åbn i {0}",
+	"selectIDE": "Vælg IDE at åbne med",
+	"multipleProjectsFound": "Flere projekter fundet, vælg et at åbne"
+}

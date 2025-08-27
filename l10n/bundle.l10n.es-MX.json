@@ -1,0 +1,18 @@
+{
+	"extension.displayName": "OYI - Abrir en tu IDE",
+	"extension.description": "Integración universal de IDEs - Abre tus proyectos en 25+ IDEs con opciones inteligentes en el menú contextual",
+	"command.openInIDE.title": "Abrir en IDE",
+	"configuration.title": "OYI - Abrir en tu IDE",
+	"configuration.enabledIDEs.description": "Lista de IDEs a mostrar en el menú contextual",
+	"configuration.customIDEPaths.description": "Rutas personalizadas para ejecutables de IDE",
+	"configuration.defaultIDE.description": "IDE predeterminado a usar cuando múltiples opciones están disponibles",
+	"failedToOpen": "Error al abrir: {0}",
+	"noFileSelected": "No hay archivo o carpeta seleccionado",
+	"ideNotFound": "IDE '{0}' no encontrado o no instalado",
+	"openedInIde": "Abierto '{0}' en {1}",
+	"failedToLaunch": "Error al iniciar {0}: {1}",
+	"noIDEsEnabled": "No hay IDEs habilitados en la configuración",
+	"openIn": "Abrir en {0}",
+	"selectIDE": "Selecciona el IDE para abrir",
+	"multipleProjectsFound": "Múltiples proyectos encontrados, selecciona uno para abrir"
+}

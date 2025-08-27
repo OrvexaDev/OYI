@@ -1,0 +1,219 @@
+# =====================================
+# VS Code Extension Specific Ignores
+# =====================================
+
+# Compiled output directories
+out/
+dist/
+
+# Built extension packages
+*.vsix
+builds/
+
+# VS Code test runner directory
+.vscode-test/
+
+# =====================================
+# Node.js Dependencies & Build Files
+# =====================================
+
+# Dependencies
+node_modules/
+
+# Package manager locks (keep one, remove others based on preference)
+# Uncomment the ones you want to ignore:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# npm cache
+.npm/
+
+# Node.js temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =====================================
+# TypeScript & Build Artifacts
+# =====================================
+
+# TypeScript incremental compilation info
+*.tsbuildinfo
+
+# Source maps (if you don't want them in repo)
+# *.map
+
+# =====================================
+# Development & Testing
+# =====================================
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output/
+
+# Test results
+test-results/
+test-report.xml
+
+# Temporary test files
+*.tmp
+*.temp
+
+# =====================================
+# IDE & Editor Files
+# =====================================
+
+# VS Code workspace settings (optional - remove if you want to share)
+# .vscode/settings.json
+# .vscode/launch.json
+# .vscode/tasks.json
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# =====================================
+# Operating System Files
+# =====================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =====================================
+# Logs & Debug Files
+# =====================================
+
+# General logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# =====================================
+# Environment & Configuration
+# =====================================
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Local configuration files
+config.local.json
+settings.local.json
+
+# =====================================
+# Backup & Temporary Files
+# =====================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# =====================================
+# Security & Credentials
+# =====================================
+
+# API keys and secrets
+secrets/
+.secrets
+*.key
+*.pem
+*.p12
+*.pfx
+
+# =====================================
+# Project Specific Ignores
+# =====================================
+
+# Extension development artifacts
+*.vsix
+*.vsix.old
+extension-*.log
+
+# Build cache
+.cache/
+.parcel-cache/
+
+# Optional: Localization build files (uncomment if generated)
+# l10n/bundle.l10n.*.json
+
+# Generated package.nls files (auto-generated from l10n)
+package.nls*.json
+!nls/package.nls*.json
+
+# Optional: Documentation build (if using docs generators)
+# docs/build/
+# docs/dist/
+
+.vs
+.vs/
+logs
+logs/
+
+DeploymentPackage/Template-Release.md
+DeploymentPackage/Template-Preview.md

@@ -1,0 +1,183 @@
+name: Build VSIX Package
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check & lint & compile (no UI tests)
+        run: |
+          npm run check-types --if-present
+          npm run lint --if-present
+          npm run compile --if-present
+
+      - name: Install VSCE
+        run: npm install -g @vscode/vsce
+
+      - name: Package extension
+        id: package
+        shell: bash
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          PREVIEW=$(node -p "Boolean(require('./package.json').preview) ? 'true' : 'false'")
+          if [ "$PREVIEW" = "true" ]; then
+            SUFFIX="-preview"
+            vsce package --no-yarn --pre-release --out "oyi-open-in-ide-${VERSION}${SUFFIX}.vsix"
+          else
+            SUFFIX=""
+            vsce package --no-yarn --out "oyi-open-in-ide-${VERSION}.vsix"
+          fi
+          # Using underscore in output key (hyphen would break expression parsing)
+          echo "vsix_filename=oyi-open-in-ide-${VERSION}${SUFFIX}.vsix" >> "$GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "preview=${PREVIEW}" >> "$GITHUB_OUTPUT"
+
+      - name: Configure Git identity (local)
+        shell: bash
+        run: |
+          # Prefer explicit secrets if provided; fallback to GitHub Actions bot identity
+          GIT_USER_NAME="${GIT_USER_NAME:-github-actions[bot]}"
+            
+          GIT_USER_EMAIL="${GIT_USER_EMAIL:-41898282+github-actions[bot]@users.noreply.github.com}"
+          git config user.name "$GIT_USER_NAME"
+          git config user.email "$GIT_USER_EMAIL"
+          echo "Configured git user: $(git config user.name) <$(git config user.email)>"
+        env:
+          GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
+          GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
+
+      - name: Create version tag (Preview or Release)
+        id: createtag
+        shell: bash
+        run: |
+          VERSION="${{ steps.package.outputs.version }}"
+          PREVIEW="${{ steps.package.outputs.preview }}"
+          if [ "$PREVIEW" = "true" ]; then
+            TAG="OYI-Preview-v${VERSION}"
+          else
+            TAG="OYI-Release-v${VERSION}"
+          fi
+          echo "tag_name=$TAG" >> "$GITHUB_OUTPUT"
+          git fetch --tags --force
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Tag $TAG já existe. Nenhuma nova tag será criada.";
+          else
+            git tag -a "$TAG" -m "$TAG"
+            git push origin "$TAG"
+            echo "Tag $TAG criada e enviada.";
+          fi
+
+      - name: Upload VSIX artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: extension-vsix
+          path: ${{ steps.package.outputs.vsix_filename }}
+
+      - name: Read Release Description
+        id: release_description
+        shell: bash
+        run: |
+          VERSION="${{ steps.package.outputs.version }}"
+          PREVIEW="${{ steps.package.outputs.preview }}"
+          
+          # Determine version type and target directory
+          if [ "$PREVIEW" = "true" ]; then
+            VERSION_TYPE="preview"
+            TARGET_DIR="DeploymentPackage/Preview"
+          else
+            VERSION_TYPE="release"
+            TARGET_DIR="DeploymentPackage/Release"
+          fi
+          
+          # Convert version to hyphens for filename
+          VERSION_HYPHENS=$(echo "$VERSION" | sed 's/\./-/g')
+          DESCRIPTION_FILE="$TARGET_DIR/node-OYI-$VERSION_TYPE-v$VERSION_HYPHENS.md"
+          
+          echo "📖 Looking for pre-generated release description file..."
+          echo "Expected file: $DESCRIPTION_FILE"
+          
+          # Check if pre-generated file exists
+          if [ ! -f "$DESCRIPTION_FILE" ]; then
+            echo "❌ Error: Pre-generated description file not found at $DESCRIPTION_FILE"
+            echo "📋 Available files in $TARGET_DIR:"
+            ls -la "$TARGET_DIR" || echo "Directory not found"
+            echo ""
+            echo "⚠️ Using fallback description..."
+            echo "💡 To fix this: Generate the description file using:"
+            echo "   node scripts/generate-release-description.js --nodeVersion $VERSION_TYPE"
+            echo "   And commit the generated file to the repository."
+            
+            if [ "$PREVIEW" = "true" ]; then
+              RELEASE_BODY="Preview build v$VERSION. Tag: OYI-Preview-v$VERSION"
+            else
+              RELEASE_BODY="Release v$VERSION. Tag: OYI-Release-v$VERSION"
+            fi
+          else
+            echo "✅ Found pre-generated description file: $DESCRIPTION_FILE"
+            echo "📄 File info:"
+            ls -la "$DESCRIPTION_FILE"
+            echo ""
+            echo "📖 Reading file content..."
+            # Read the file content
+            RELEASE_BODY=$(cat "$DESCRIPTION_FILE")
+            echo "✅ Successfully read $(wc -l < "$DESCRIPTION_FILE") lines from description file"
+          fi
+          
+          # Set output for next step (escape newlines for GitHub output)
+          {
+            echo 'release_body<<EOF'
+            echo "$RELEASE_BODY"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+          
+          echo "description_file=$DESCRIPTION_FILE" >> "$GITHUB_OUTPUT"
+          echo "📝 Release description prepared successfully"
+
+      - name: Create Preview Release (versioned tag)
+        if: ${{ steps.package.outputs.preview == 'true' }}
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT_RELEASE }}
+        with:
+          tag_name: ${{ steps.createtag.outputs.tag_name }}
+          name: "Preview v${{ steps.package.outputs.version }}"
+          prerelease: true
+          draft: false
+          files: ${{ steps.package.outputs.vsix_filename }}
+          target_commitish: ${{ github.sha }}
+          body: ${{ steps.release_description.outputs.release_body }}
+
+      - name: Create Stable Release (versioned tag)
+        if: ${{ steps.package.outputs.preview == 'false' }}
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT_RELEASE }}
+        with:
+          tag_name: ${{ steps.createtag.outputs.tag_name }}
+          name: "Release v${{ steps.package.outputs.version }}"
+          prerelease: false
+          draft: false
+          files: ${{ steps.package.outputs.vsix_filename }}
+          target_commitish: ${{ github.sha }}
+          body: ${{ steps.release_description.outputs.release_body }}

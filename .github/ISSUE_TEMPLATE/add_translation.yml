@@ -1,0 +1,200 @@
+name: 🌍 Translation Contribution
+description: Contribute translations for the OYI extension
+title: "[TRANSLATION] Add support for "
+labels: ["translation", "localization", "community"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🌍 Translation Contribution for OYI - Open in your IDE
+        
+        Thank you for helping make OYI accessible to more developers worldwide! Your translation contributions help expand our global reach.
+        
+        Please provide information about the language you'd like to translate or improve.
+        
+        **Maintained by**: Orvexa by KAGEYOSHI | **Contact**: [orvexa.support@kageyoshi.com](mailto:orvexa.support@kageyoshi.com)
+
+  - type: checkboxes
+    id: pre-submission
+    attributes:
+      label: 📋 Pre-submission Checklist
+      description: Please verify the following before submitting
+      options:
+        - label: I have checked existing translations and this language is not fully supported
+          required: true
+        - label: I am a native speaker or fluent in this language
+          required: true
+        - label: I understand the technical terminology related to software development
+          required: true
+
+  - type: dropdown
+    id: language-code
+    attributes:
+      label: 🏷️ Language Code
+      description: Select the language you want to contribute to
+      options:
+        - ar-EG (Arabic - Egypt)
+        - ar-SA (Arabic - Saudi Arabia)
+        - da-DK (Danish - Denmark)
+        - de-DE (German - Germany)
+        - en-AU (English - Australia)
+        - en-CA (English - Canada)
+        - en-GB (English - United Kingdom)
+        - en-IN (English - India)
+        - es-AR (Spanish - Argentina)
+        - es-CO (Spanish - Colombia)
+        - es-ES (Spanish - Spain)
+        - es-MX (Spanish - Mexico)
+        - es-PE (Spanish - Peru)
+        - fil-PH (Filipino - Philippines)
+        - fr-FR (French - France)
+        - id-ID (Indonesian - Indonesia)
+        - it-IT (Italian - Italy)
+        - ja-JP (Japanese - Japan)
+        - ko-KR (Korean - South Korea)
+        - nl-NL (Dutch - Netherlands)
+        - pl-PL (Polish - Poland)
+        - pt-BR (Portuguese - Brazil)
+        - pt-PT (Portuguese - Portugal)
+        - ru-RU (Russian - Russia)
+        - th-TH (Thai - Thailand)
+        - ur-PK (Urdu - Pakistan)
+        - zh-CN (Chinese Simplified - China)
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: custom-language
+    attributes:
+      label: 🗣️ Custom Language (if "Other" selected)
+      description: If you selected "Other", please specify the language and locale code
+      placeholder: "e.g., sv-SE (Swedish - Sweden), hi-IN (Hindi - India)"
+
+  - type: dropdown
+    id: contribution-type
+    attributes:
+      label: 📝 Contribution Type
+      description: What type of translation contribution are you making?
+      options:
+        - New Translation (complete translation for a new language)
+        - Translation Update (improve existing translation)
+        - Translation Review (review and correct existing translation)
+        - Partial Translation (translate specific sections)
+    validations:
+      required: true
+
+  - type: textarea
+    id: translation-experience
+    attributes:
+      label: 🎯 Translation Experience
+      description: Tell us about your experience with translations and localization
+      placeholder: |
+        - Previous translation projects
+        - Familiarity with software localization
+        - Experience with VS Code extensions
+        - Technical writing background
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: translation-areas
+    attributes:
+      label: 📚 Translation Areas
+      description: Which areas would you like to contribute to?
+      options:
+        - label: Extension description and metadata
+        - label: Context menu items
+        - label: Error messages and notifications
+        - label: Settings and configuration
+        - label: Documentation (README, guides)
+        - label: Issue templates and forms
+
+  - type: textarea
+    id: sample-translations
+    attributes:
+      label: 📖 Sample Translations
+      description: Provide some sample translations for key terms (optional but helpful)
+      placeholder: |
+        "Open in your IDE" → [Your translation]
+        "Visual Studio" → [Your translation]
+        "Open with" → [Your translation]
+        "IDE not found" → [Your translation]
+        "Select IDE" → [Your translation]
+    validations:
+      required: false
+
+  - type: textarea
+    id: cultural-considerations
+    attributes:
+      label: 🌐 Cultural Considerations
+      description: Any cultural or linguistic considerations for this language?
+      placeholder: |
+        - Formal vs informal tone preferences
+        - Technical terminology conventions
+        - Right-to-left reading considerations
+        - Regional variations to consider
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: availability
+    attributes:
+      label: ⏰ Availability
+      description: Your availability for this translation project
+      options:
+        - label: I can complete the translation within 1-2 weeks
+        - label: I can complete the translation within 1 month
+        - label: I can work on this as time permits (ongoing)
+        - label: I need help or collaboration with other translators
+
+  - type: textarea
+    id: collaboration-preference
+    attributes:
+      label: 🤝 Collaboration Preference
+      description: How would you prefer to collaborate on this translation?
+      placeholder: |
+        - Direct GitHub PR with translation files
+        - Collaborative document editing
+        - Email coordination
+        - Real-time chat/discussion
+        - Review existing translations first
+    validations:
+      required: true
+
+  - type: input
+    id: contact-info
+    attributes:
+      label: 📧 Contact Information
+      description: How can we reach you for coordination? (Email, GitHub username, etc.)
+      placeholder: "email@example.com or @github-username"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: ℹ️ Additional Information
+      description: Any other information that would help us coordinate this translation
+      placeholder: |
+        - Specific expertise in certain domains
+        - Preferred communication language
+        - Time zone considerations
+        - Questions about the translation process
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: commitment
+    attributes:
+      label: ✅ Commitment
+      description: Please confirm your commitment to this translation project
+      options:
+        - label: I understand this is a volunteer contribution to an open-source project
+          required: true
+        - label: I commit to providing accurate and high-quality translations
+          required: true
+        - label: I am willing to review and update translations when needed
+          required: true

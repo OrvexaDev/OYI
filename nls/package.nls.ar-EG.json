@@ -1,0 +1,9 @@
+{
+	"extension.displayName": "OYI - افتح في بيئة التطوير بتاعتك",
+	"extension.description": "تكامل شامل لبيئات التطوير - افتح مشاريعك في أكتر من 25 بيئة تطوير مع خيارات قائمة السياق الذكية",
+	"command.openInIDE.title": "افتح في بيئة التطوير",
+	"configuration.title": "OYI - افتح في بيئة التطوير بتاعتك",
+	"configuration.enabledIDEs.description": "قائمة بيئات التطوير المعروضة في قائمة السياق",
+	"configuration.customIDEPaths.description": "مسارات مخصصة لملفات تشغيل بيئات التطوير",
+	"configuration.defaultIDE.description": "بيئة التطوير الافتراضية للاستخدام لما يكون في خيارات كتير"
+}

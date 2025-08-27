@@ -1,0 +1,18 @@
+{
+	"extension.displayName": "OYI - เปิดใน IDE ของคุณ",
+	"extension.description": "การผสานรวม IDE แบบสากล - เปิดโปรเจ็กต์ของคุณใน IDE มากกว่า 25 ตัวด้วยตัวเลือกเมนูบริบทที่ฉลาด",
+	"command.openInIDE.title": "เปิดใน IDE",
+	"configuration.title": "OYI - เปิดใน IDE ของคุณ",
+	"configuration.enabledIDEs.description": "รายการ IDE ที่จะแสดงในเมนูบริบท",
+	"configuration.customIDEPaths.description": "เส้นทางที่กำหนดเองสำหรับไฟล์ปฏิบัติการ IDE",
+	"configuration.defaultIDE.description": "IDE เริ่มต้นที่จะใช้เมื่อมีตัวเลือกหลายตัว",
+	"failedToOpen": "ไม่สามารถเปิดได้: {0}",
+	"noFileSelected": "ไม่ได้เลือกไฟล์หรือโฟลเดอร์",
+	"ideNotFound": "ไม่พบ IDE '{0}' หรือไม่ได้ติดตั้ง",
+	"openedInIde": "เปิด '{0}' ใน {1} แล้ว",
+	"failedToLaunch": "ไม่สามารถเริ่ม {0}: {1}",
+	"noIDEsEnabled": "ไม่มี IDE ที่เปิดใช้งานในการตั้งค่า",
+	"openIn": "เปิดใน {0}",
+	"selectIDE": "เลือก IDE เพื่อเปิด",
+	"multipleProjectsFound": "พบโปรเจ็กต์หลายตัว กรุณาเลือกหนึ่งตัวเพื่อเปิด"
+}

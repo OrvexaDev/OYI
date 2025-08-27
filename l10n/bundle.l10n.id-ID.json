@@ -1,0 +1,18 @@
+{
+	"extension.displayName": "OYI - Buka di IDE Anda",
+	"extension.description": "Integrasi IDE universal - Buka proyek Anda di 25+ IDE dengan opsi menu konteks yang cerdas",
+	"command.openInIDE.title": "Buka di IDE",
+	"configuration.title": "OYI - Buka di IDE Anda",
+	"configuration.enabledIDEs.description": "Daftar IDE untuk ditampilkan di menu konteks",
+	"configuration.customIDEPaths.description": "Path kustom untuk executable IDE",
+	"configuration.defaultIDE.description": "IDE default untuk digunakan ketika beberapa opsi tersedia",
+	"failedToOpen": "Gagal membuka: {0}",
+	"noFileSelected": "Tidak ada file atau folder yang dipilih",
+	"ideNotFound": "IDE '{0}' tidak ditemukan atau tidak terinstall",
+	"openedInIde": "Membuka '{0}' di {1}",
+	"failedToLaunch": "Gagal meluncurkan {0}: {1}",
+	"noIDEsEnabled": "Tidak ada IDE yang diaktifkan di pengaturan",
+	"openIn": "Buka di {0}",
+	"selectIDE": "Pilih IDE untuk membuka",
+	"multipleProjectsFound": "Beberapa proyek ditemukan, pilih satu untuk dibuka"
+}
